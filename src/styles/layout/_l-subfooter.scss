@@ -1,0 +1,110 @@
+@use "./../foundation/global" as *;
+
+.l-subfooter {}
+
+.l-subfooter ul {
+    display: flex;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.l-subfooter ul li {
+    width: 50%;
+    height: 452px;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.l-subfooter ul li img {
+    @media screen and (max-width: 768px) {
+        aspect-ratio: 390/245;
+    }
+}
+
+.l-subfooter ul li a {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.l-subfooter ul li a>* {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.l-subfooter .mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 17, 17, 0.16);
+
+}
+
+// .l-subfooter ul li a img::after {
+//     z-index: 2;
+//     content: "";
+//     display: block;
+//     position: absolute;
+//     display: block;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgba(17, 17, 17, 0.86);
+// }
+
+// .l-subfooter ul .contact {
+//     background-image: url('/images/footer_contact.png');
+//     background-size: cover;
+// }
+
+// .l-subfooter ul .recruit {
+//     background-image: url('/images/footer_recruit.png');
+//     background-size: cover;
+// }
+
+
+
+.l-subfooter .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 24px;
+
+    @media screen and (max-width: 768px) {
+        font-size: 18px;
+    }
+}
+
+.l-subfooter .text.--contact::before {
+    content: "contact";
+    font-size: 64px;
+    font-weight: bold;
+    text-transform: capitalize;
+
+    @media screen and (max-width: 768px) {
+        font-size: 42px;
+    }
+}
+
+.l-subfooter .text.--recruit::before {
+    content: "recruit";
+    font-size: 64px;
+    font-weight: bold;
+    text-transform: capitalize;
+
+    @media screen and (max-width: 768px) {
+        font-size: 42px;
+    }
+}
