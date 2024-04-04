@@ -1,0 +1,11 @@
+---
+const { heading, en, url } = Astro.props;
+---
+
+<div class="l-hero">
+    <img src={url} alt="" class="l-hero__img" />
+    <div class="l-hero__text">
+        <h1 class="l-hero__heading">{heading}</h1>
+        <p class="l-hero__heading-en">{en}</p>
+    </div>
+</div>

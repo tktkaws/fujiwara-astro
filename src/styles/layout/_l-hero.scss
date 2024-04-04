@@ -1,0 +1,45 @@
+@use "./../foundation/global" as *;
+
+.l-hero {
+    display: grid;
+    grid-template-columns: $space5 180px 1fr;
+    grid-template-rows: 400px auto;
+}
+
+.l-hero__text {
+    grid-column: 2/3;
+    grid-row: 2/2;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+    align-items: start;
+    margin-left: 26px;
+}
+
+.l-hero__heading-en {
+    font-size: 64px;
+    font-weight: bold;
+    position: relative;
+}
+
+.l-hero__heading-en::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: $c-green;
+    border-radius: 100%;
+    left: -26px;
+    top: 30px;
+}
+
+.l-hero__heading {
+    font-size: 16px;
+    color: $c-green;
+}
+
+.l-hero__img {
+    grid-column: 3/3;
+    grid-row: 1/-1;
+}
