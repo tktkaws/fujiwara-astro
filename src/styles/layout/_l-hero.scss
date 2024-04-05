@@ -4,6 +4,13 @@
     display: grid;
     grid-template-columns: $space5 180px 1fr;
     grid-template-rows: 400px auto;
+    height: 604px;
+
+    @media screen and (max-width: 768px) {
+        height: auto;
+        grid-template-columns: $mobile-space 1fr $mobile-space;
+        grid-template-rows: 40vw 27vw auto;
+    }
 }
 
 .l-hero__text {
@@ -14,12 +21,22 @@
     justify-content: start;
     align-items: start;
     margin-left: 26px;
+
+    @media screen and (max-width: 768px) {
+        grid-column: 2/2;
+        grid-row: 2/2;
+        margin-left: 6.6vw;
+    }
 }
 
 .l-hero__heading-en {
     font-size: 64px;
     font-weight: bold;
     position: relative;
+
+    @media screen and (max-width: 768px) {
+        font-size: 10vw;
+    }
 }
 
 .l-hero__heading-en::before {
@@ -32,14 +49,31 @@
     border-radius: 100%;
     left: -26px;
     top: 30px;
+
+    @media screen and (max-width: 768px) {
+        width: 10px;
+        height: 10px;
+        left: -6.6vw;
+        top: 4.5vw;
+    }
 }
 
 .l-hero__heading {
     font-size: 16px;
     color: $c-green;
+
+    @media screen and (max-width: 768px) {
+        font-size: 3.5vw;
+    }
 }
 
 .l-hero__img {
     grid-column: 3/3;
     grid-row: 1/-1;
+
+    @media screen and (max-width: 768px) {
+        grid-column: 1/-1;
+        grid-row: 3/3;
+        aspect-ratio: 390/280;
+    }
 }
